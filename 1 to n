@@ -1,0 +1,42 @@
+/*Given a number n, print 1 to n
+head recurssion*/
+import java.util.Scanner;
+public class recurssion {
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num=sc.nextInt();
+        recurssion object=new recurssion();
+        object.f(num);
+    }
+    void f(int n)
+    {
+        if(n==0)
+            return;
+        f(n-1);
+        System.out.print(n+" ");
+    }
+}
+/*---------------------------------------------------------------------
+Given a number n, print 1 to n
+tailed recurssion*/
+
+import java.util.Scanner;
+public class recurssion {
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num=sc.nextInt();
+        recurssion object=new recurssion();
+        object.f(num,1);
+    }
+    void f(int n,int i)
+    {
+        if(i>n)
+            return;
+        System.out.print(i+" ");
+        f(n,i+1);
+    }
+}
