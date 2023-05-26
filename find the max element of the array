@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class recursion {
+    public static void main(String[]aa)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of elelemts in the array: ");
+        int n=sc.nextInt();
+        int []arr=new int[n];
+        System.out.println("Enter the elements of the array: ");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        recursion object=new recursion();
+        int result=object.max(arr,0);
+        System.out.println("The max element in the array is: "+result);
+    }
+    int max(int[] arr,int index)
+    {
+        if(index>=arr.length)
+            return -1;
+        int ele=max(arr,index+1);
+        if(arr[index]>ele)
+            return arr[index];
+        else
+            return ele;
+    }
+}
